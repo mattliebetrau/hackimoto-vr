@@ -20,15 +20,44 @@
 
       <a-sky color="#eee"></a-sky>
 
-      <a-entity material="shader: flat; src: #videoParis"
-                geometry="primitive: plane; width: 160; height: 90;"
-                position="0 0 -150">
+      <a-entity text="text: Yan; size: 8"
+                position="-80 98 -150"
+                material="color:#505050">
       </a-entity>
 
-      <a-entity text="text: What's up; size: 8"
-                position="-80 50 -150"
-                material="color:#000">
+      <a-entity text="text: November 20, 2015; size: 3.5"
+                position="-80 90 -150"
+                material="color:#969696">
       </a-entity>
+
+      <a-entity material="shader: flat; src: #videoParis"
+                geometry="primitive: plane; width: 160; height: 90;"
+                position="0 40 -150">
+      </a-entity>
+
+      <a-cube position="0 -20 -150"
+              rotation="0 0 0"
+              width="160"
+              height="20"
+              depth="1"
+              color="#dadada">
+      </a-cube>
+
+      <a-cube position="150 0 20"
+              rotation="0 90 0"
+              width="100"
+              height="150"
+              depth="1"
+              color="#000">
+      </a-cube>
+
+      <a-cube position="-150 0 20"
+              rotation="0 90 0"
+              width="100"
+              height="150"
+              depth="1"
+              color="#000">
+      </a-cube>
     </a-scene>
     <script type="text/javascript"></script>
   </body>
