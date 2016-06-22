@@ -35,17 +35,17 @@
       </a-entity>
 
       <a-image id="thePlayIcon"
-               position="110 50 -400"
+               position="-80 -40 -400"
                src="#playIcon"
-               geometry="primitive: plane; width: 40; height: 40;"
-               rotation="-10 -15 0">
+               geometry="primitive: plane; width: 35; height: 35;"
+               rotation="-10 15 0">
       </a-image>
 
       <a-image id="thePauseIcon"
-               position="110 30 -400"
+               position="28 -39 -400"
                src="#pauseIcon"
-               geometry="primitive: plane; width: 40; height: 80;"
-               rotation="-10 -15 0">
+               geometry="primitive: plane; width: 40; height: 45;"
+               rotation="-10 0 0">
       </a-image>
 
 
@@ -57,41 +57,52 @@
               position="-150 0 -75"
               rotation="0 60 0"
               width="100"
-              height="150"
+              height="100"
               depth="1"
               color="#000"
-              opacity="0.4">
+              opacity="0.25">
 
         <!-- Left Sidebar - By -->
         <a-entity text="text: BY; size: 6"
-                  position="-40 60 1"
+                  position="-40 35 1"
                   rotation="0 0 0"
                   material="color:#fff">
         </a-entity>
 
         <a-entity text="text: Matt Liebetrau; size: 3"
-                  position="-40 55 1"
+                  position="-40 30 1"
                   rotation="0 0 0"
                   material="color:#fff">
         </a-entity>
 
         <!-- Left Sidebar - About -->
         <a-entity text="text: ABOUT; size: 6"
-                  position="-40 40 1"
+                  position="-40 15 1"
                   rotation="0 0 0"
                   material="color:#fff">
         </a-entity>
 
         <a-entity text="text: World-space rotations of child entities are; size: 3"
-                  position="-40 35 1"
+                  position="-40 10 1"
                   rotation="0 0 0"
                   material="color:#fff">
         </a-entity>
         <a-entity text="text: inherited from parent entities. Consider this; size: 3"
-                  position="-40 30 1"
+                  position="-40 5 1"
                   rotation="0 0 0"
                   material="color:#fff">
         </a-entity>
+      </a-cube>
+
+      <!-- Right Sidebar -->
+      <a-cube id="leftSidebar"
+              position="150 0 -75"
+              rotation="0 60 0"
+              width="100"
+              height="100"
+              depth="1"
+              color="#000"
+              opacity="0.25">
       </a-cube>
 
       <a-cube id="ali"
