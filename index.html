@@ -54,8 +54,8 @@
 
       <!-- Left Sidebar -->
       <a-cube id="leftSidebar"
-              position="-150 0 -100"
-              rotation="0 45 0"
+              position="-150 0 -75"
+              rotation="0 60 0"
               width="100"
               height="150"
               depth="1"
@@ -94,11 +94,23 @@
         </a-entity>
       </a-cube>
 
+      <a-cube id="ali"
+              position="-150 -22 -7"
+              rotation="0 60 0"
+              width="10"
+              height="10"
+              depth="1"
+              color="#000"
+              opacity="0"
+              sound="src: ali.m4a; on: mouseenter; volume: 100">
+      </a-cube>
+
     </a-scene>
     <script type="text/javascript">
       var theVideo  = document.querySelector('#theVideo'),
           playIcon  = document.querySelector('#thePlayIcon'),
-          pauseIcon = document.querySelector('#thePauseIcon');
+          pauseIcon = document.querySelector('#thePauseIcon'),
+          ali = document.querySelector('#ali');
 
       playIcon.addEventListener('mouseenter', function () {
         document.querySelector('#videoParis').play();
@@ -106,6 +118,10 @@
 
       pauseIcon.addEventListener('mouseenter', function () {
         document.querySelector('#videoParis').pause();
+      });
+
+      ali.addEventListener('mouseenter', function () {
+        document.querySelector('#ali').play();
       });
 
     </script>
