@@ -35,7 +35,18 @@
                 geometry="primitive: plane; width: 160; height: 90;"
                 position="-24 35 -400"
                 rotation="0 5 1.25">
+        <a-animation attribute="scale" begin="grow" to="2 2 2"></a-animation>
+        <a-animation attribute="scale" begin="shrink" to="1 1 1"></a-animation>
       </a-entity>
+
+
+
+      <a-image id="thePauseIcon"
+               position="28 -39 -410"
+               src="#pauseIcon"
+               geometry="primitive: plane; width: 40; height: 45;"
+               rotation="-10 0 0">
+      </a-image>
 
       <a-image id="thePlayIcon"
                position="-80 -40 -400"
@@ -43,17 +54,6 @@
                geometry="primitive: plane; width: 35; height: 35;"
                rotation="-10 15 0">
       </a-image>
-
-      <a-image id="thePauseIcon"
-               position="28 -39 -400"
-               src="#pauseIcon"
-               geometry="primitive: plane; width: 40; height: 45;"
-               rotation="-10 0 0">
-      </a-image>
-
-
-
-
 
       <!-- Left Sidebar -->
       <a-cube id="leftSidebar"
@@ -163,12 +163,43 @@
               sound="src: Ali.mp3; on: mouseenter; volume: 100">
       </a-cube>
 
+      <a-cube id="guitar"
+              position="-224 7 -400"
+              rotation="0 0 0"
+              width="10"
+              height="10"
+              depth="1"
+              color="#000"
+              opacity="0">
+      </a-cube>
+
+      <a-cube id="guitar2"
+              position="-224 70 -400"
+              rotation="0 0 0"
+              width="10"
+              height="20"
+              depth="1"
+              color="#000"
+              opacity="0">
+      </a-cube>
+
     </a-scene>
     <script type="text/javascript">
       var theVideo  = document.querySelector('#theVideo'),
           playIcon  = document.querySelector('#thePlayIcon'),
           pauseIcon = document.querySelector('#thePauseIcon'),
-          ali = document.querySelector('#ali');
+          ali       = document.querySelector('#ali'),
+          guitar    = document.querySelector('#guitar'),
+          guitar2   = document.querySelector('#guitar2');
+
+      guitar.addEventListener('mouseenter', function () {
+        theVideo.emit('grow');
+        document.querySelector('#videoParis').play();
+      });
+
+      guitar2.addEventListener('mouseenter', function () {
+        theVideo.emit('shrink');
+      });
 
       playIcon.addEventListener('mouseenter', function () {
         document.querySelector('#videoParis').play();
